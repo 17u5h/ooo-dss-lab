@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+:root {
+  --header-width: 280px;
+  --font-regular: 16px;
+  --line-height-regular: 18px;
+  --header-button-width: 34%;
+  --content-block-right-height: 320px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dialog-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #777;
+  font-size: var(--font-regular);
+  line-height: var(--line-height-regular);
 }
 
-.App-link {
-  color: #61dafb;
+.dialog {
+  background-color: #fff;
+  max-height: 500px;
+  max-width: 350px;
+}
+.dialog__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ddd;
+}
+.dialog__header-title-container {
+  width: calc(100% - var(--header-button-width));
+  padding-left: 1px;
+}
+.dialog__header-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dialog__header-subtitle {
+  width: 90%;
+}
+.dialog__header-button {
+  width: var(--header-button-width);
+}
+.dialog__content {
+  display: flex;
+}
+.dialog__content-block_left {
+  width: 30%;
+  border-right: 1px solid #ccc;
+}
+.dialog__content-block_right {
+  width: 70%;
+  height: var(--content-block-right-height);
+  overflow-y: auto;
+}
+.dialog__footer {
+  background-color: #ddd;
+  text-align: center;
+  word-break: break-word;
+  font-size: var(--font-regular);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
 }
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,77 @@
+@import "./styles-variables/globals";
+
+.dialog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #777;
+  font-size: var(--font-regular);
+  line-height: var(--line-height-regular);
+}
+
+.dialog {
+  background-color: #fff;
+  max-height: 500px;
+  max-width: 350px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ddd;
+  }
+
+  &__header-title-container {
+    width: calc(100% - var(--header-button-width));
+    padding-left: 1px;
+  }
+
+  &__header-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__header-subtitle {
+    width: 90%;
+  }
+
+  &__header-button {
+    width: var(--header-button-width)
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__content-block {
+    &_left {
+      width: 30%;
+      border-right: 1px solid #ccc;
+    }
+
+    &_right {
+      width: 70%;
+      height: var(--content-block-right-height);
+      overflow-y: auto;
+    }
+  }
+
+  &__footer {
+    background-color: #ddd;
+    text-align: center;
+    word-break: break-word;
+    font-size: var(--font-regular);
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+}
